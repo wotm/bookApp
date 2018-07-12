@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-5 mx-auto">
+			<span>Filtre par : 
+				<select (change)="filterByDispo($event)">
+					<option value="0">Sélectionnez une valeur</option>
+					<option value="true">Disponible</option>
+					<option value="false">Non disponible</option>
+				</select>
+			</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="container">
+				<app-book *ngFor="let book of books" [data]="book"></app-book>
+			</div>
+		<div class="col-md-4">
+			<!-- <app-detail-book ></app-detail-book> --> <!-- *ngIf="detailBookFlag" [detailBookFlag]="detailBookFlag" -->
+		</div>
+		</div>
+</div>

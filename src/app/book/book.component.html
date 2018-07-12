@@ -1,0 +1,9 @@
+<div class="row">
+	<div class="col-md-7">
+		<p><a (click)="loadDetailBook()" routerLink="/books/{{book.id}}"><strong>{{book.title}}</strong></a></p>
+	</div>
+	<div class="col-md-5">
+		<span class="text-success" *ngIf="book.available">Disponible</span>
+		<span class="text-danger" *ngIf="!book.available">Non disponible</span>
+	</div>
+</div>
